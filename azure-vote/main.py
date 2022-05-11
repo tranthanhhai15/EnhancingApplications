@@ -23,7 +23,7 @@ from opencensus.trace.samplers import ProbabilitySampler
 from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
-instrumentation_key = 'InstrumentationKey=b86aa20d-7790-4117-bba6-e6fbc525eefa;IngestionEndpoint=https://japanwest-0.in.applicationinsights.azure.com/;LiveEndpoint=https://japanwest.livediagnostics.monitor.azure.com/'
+instrumentation_key = "InstrumentationKey=8554f27c-b94d-4e44-841d-ab80c8e10b8d;IngestionEndpoint=https://eastasia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://eastasia.livediagnostics.monitor.azure.com/"
 
 # For metrics
 stats = stats_module.stats
@@ -82,9 +82,8 @@ else:
     title = app.config['TITLE']
 
 # Redis Connection
-r = redis.Redis()
 redis_server = os.environ['REDIS']
-# Redis Connection to another container
+
 try:
     if "REDIS_PWD" in os.environ:
         r = redis.StrictRedis(host=redis_server,
@@ -92,7 +91,7 @@ try:
                         password=os.environ['REDIS_PWD'])
     else:
         r = redis.Redis(redis_server)
-r.ping()
+    r.ping()
 except redis.ConnectionError:
     exit('Failed to connect to Redis, terminating.')
 
