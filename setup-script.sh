@@ -2,9 +2,9 @@
 
 # Variables
 resourceGroup="acdnd-c4-project"
-location="westus"
+location="eastasia"
 osType="UbuntuLTS"
-vmssName="udacity-vmss"
+vmssName="udacity-vmss1"
 adminName="udacityadmin"
 storageAccount="udacitydiag$RANDOM"
 bePoolName="$vmssName-bepool"

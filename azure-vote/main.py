@@ -23,7 +23,7 @@ from opencensus.trace.samplers import ProbabilitySampler
 from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
-instrumentation_key = "InstrumentationKey=8554f27c-b94d-4e44-841d-ab80c8e10b8d"
+instrumentation_key = "InstrumentationKey=78908d87-e3d3-4597-b0b4-e6d95d2e9c62"
 
 # For metrics
 stats = stats_module.stats
